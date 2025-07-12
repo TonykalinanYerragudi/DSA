@@ -31,3 +31,8 @@ for (int i = 0; i < arr.Length; i++)
   Console.WriteLine("array: "+ arr[i]);
   Console.WriteLine("list: "+ list[i]);
 }
+
+List<object> objects = new List<object>(){"string", 1, true};
+foreach(var obj in objects){
+  Console.WriteLine(obj);
+}
