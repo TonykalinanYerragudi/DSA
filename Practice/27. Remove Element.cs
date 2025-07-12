@@ -25,3 +25,6 @@ public class Solution {
         return count;
     }
 }
+
+
+// two-pointer technique
