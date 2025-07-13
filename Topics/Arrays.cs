@@ -100,3 +100,17 @@ class Program
         Console.WriteLine(myarr.ToString()); 
     }
 }
+
+
+var str = "Think";
+var arr5 = str.ToArray();
+for(int i=0; i<arr5.Length/2; i++){
+  var temp = arr5[i];
+  arr5[i] = arr5[(arr5.Length-1) - i];
+  arr5[(arr5.Length-1) - i] = temp;
+}
+str = "";
+foreach(var c in arr5){
+  str += c;
+}
+Console.WriteLine(str);
