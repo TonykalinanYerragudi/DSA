@@ -114,3 +114,33 @@ foreach(var c in arr5){
   str += c;
 }
 Console.WriteLine(str);
+
+int[] arrn1 = new int[] {10, 3, 40, 31};
+int[] arrn2 = new int[] {1, 60, 30};
+var nn = mergeSortedArrays(arrn1, arrn2);
+foreach(var i in nn){
+  Console.WriteLine(i);
+}
+List<int> mergeSortedArrays(int[] n1, int[] n2){
+  var n3 = new List<int>();
+
+  foreach(var a in n1){
+    n3.Add(a);
+  }
+  foreach(var b in n2){
+    n3.Add(b);
+  }
+
+  for(int i=0; i<n3.Count-1; i++){
+    int count = i;
+    for(int j=i+1; j<n3.Count; j++){
+      if(n3[i] > n3[j]){
+        var temp = n3[i];
+        n3[i] = n3[j];
+        n3[j] = temp;
+        count++;
+      }
+    }
+  }
+  return n3;
+}
