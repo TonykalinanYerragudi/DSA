@@ -19,8 +19,38 @@ Explanation: The arrays we are merging are [] and [1].
 The result of the merge is [1].
 Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
 */
+//O(m+n)
+public class Solution {
+    public void Merge(int[] nums1, int m, int[] nums2, int n) {
+       int i = m-1;
+       int j = n-1;
+       int k = (m+n)-1;
+
+       while(i>=0 && j>=0){
+        if(nums1[i] > nums2[j]){
+            nums1[k] = nums1[i];
+            k--;
+            i--;
+        }
+        else{
+            nums1[k] = nums2[j];
+            j--;
+            k--;
+        }
+       }
+
+        while(j>=0){
+            nums1[k] = nums2[j];
+            k--;
+            j--;
+        }
+    }
+}
+
+
 
 //O(n**2)
+/*
 public class Solution {
     public void Merge(int[] nums1, int m, int[] nums2, int n) {
         var n3 = new List<int>();
@@ -49,3 +79,4 @@ public class Solution {
         }
     }
 }
+*/
