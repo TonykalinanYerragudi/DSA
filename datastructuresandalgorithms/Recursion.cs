@@ -46,3 +46,14 @@ output:
 4
 
 */
+
+
+/*
+Recursion Tree
+
+  f()  ->
+    <- f()
+       ->
+    <- f()
+
+*/
